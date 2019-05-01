@@ -5,7 +5,8 @@
 user_name <- 'bob'
 user_email <- 'bob@bob.com'
 user_image <- 'https://randomuser.me/api/portraits/men/32.jpg'
-user_bio <- ''
+user_affiliation <- 'bob\'s company'
+user_bio <- 'this is my bio'
 
 
 ## UI for Profile Module
@@ -22,12 +23,23 @@ module_profile <- function(input, output, session) {
   output$uiProfile <- renderUI({
     f7Card(title = user_name,
            div(style = 'text-align: center;',
-               tags$div(style = 'height: 80px; width: 80px; display: inline-block;',
+               tags$div(style = 'height: 120px; width: 120px; display: inline-block;',
                         tags$img(style='height: 100%; width: 100%; object-fit: contain', src=user_image)
                         ),
                br(),
                h3(user_name),
-               h3(user_email)
+               h3(user_email),
+               h3(user_affiliation),
+               f7Block(strong = TRUE, inset = TRUE,
+                   f7InputList(
+                     list(
+                       list(type = 'textarea', label = 'bio', inputId = ns('txt_bio'), value = user_bio, clearButton = FALSE)
+                     ),
+                     outline = FALSE,
+                     labels = 'stacked'
+                   )
+               )
+               
                )
            )
   })
