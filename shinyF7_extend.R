@@ -75,3 +75,12 @@ f7Tabs2 <- function(..., swipeable = FALSE, animated = TRUE, scrollable = FALSE)
   shiny::tagList(toolbarTag, contentTag)
   
 }
+
+
+
+## function to select a specific tab
+tab_select <- function(session, tab = NULL) {
+  if (!is.null(tab)) session$sendCustomMessage("tab-select", tab)
+}
+
+

@@ -51,7 +51,7 @@ server <- function(input, output, session) {
     module_locationUI('location')
   })
   
-  session$sendCustomMessage("tab-select", 'Attendees')
+  tab_select(session, 'Location')
 }
 
 ui <- f7Page(
