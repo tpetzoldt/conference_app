@@ -74,7 +74,7 @@ ui <- f7Page(
                   h4('this app was built using shinyf7'))
             )
     ),
-    f7Navbar(title = 'About', hairline = TRUE, shadow = TRUE, left_panel = TRUE, right_panel = FALSE),
+    f7Navbar(title = 'Conference App', hairline = TRUE, shadow = TRUE, left_panel = TRUE, right_panel = FALSE),
     f7Tabs2(animated = TRUE, scrollable = TRUE,
            f7Tab(tabName = 'Home', icon = 'home', active = FALSE,
                  uiOutput('homeUI')
