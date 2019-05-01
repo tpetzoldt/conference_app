@@ -15,7 +15,7 @@ module_home <- function(input, output, session) {
     buttons <- list (
       list(name = 'Feed', icon = 'list'),
       list(name = 'Profile', icon = 'person'),
-      list(name = 'Agenda', icon = 'event_available'),
+      list(name = 'Schedule', icon = 'event_available'),
       list(name = 'Attendees', icon = 'people'), 
       list(name = 'Location', icon = 'place')
       )
@@ -48,8 +48,8 @@ module_home <- function(input, output, session) {
     tab_select(session, 'Profile')
   })
   
-  observeEvent(input$but_Agenda, {
-    tab_select(session, 'Agenda')
+  observeEvent(input$but_Schedule, {
+    tab_select(session, 'Schedule')
   })
   
   observeEvent(input$but_Attendees, {

@@ -9,7 +9,7 @@ source('./shinyF7_extend.R')
 source('./modules/module_home.R')
 source('./modules/module_feed.R')
 source('./modules/module_profile.R')
-source('./modules/module_agenda.R')
+source('./modules/module_schedule.R')
 source('./modules/module_attendees.R')
 source('./modules/module_location.R')
 
@@ -34,9 +34,9 @@ server <- function(input, output, session) {
   })
 
   ## Agenda Module
-  callModule(module_agenda, 'agenda')
-  output$agendaUI <- renderUI({
-    module_agendaUI('agenda')
+  callModule(module_schedule, 'schedule')
+  output$scheduleUI <- renderUI({
+    module_scheduleUI('schedule')
   })
   
   ## Attendees Module
@@ -85,8 +85,8 @@ ui <- f7Page(
            f7Tab(tabName = 'Profile', icon = 'person', active = FALSE,
                  uiOutput('profileUI')
                  ),
-           f7Tab(tabName = 'Agenda', icon = 'event_available', active = FALSE,
-                 uiOutput('agendaUI')
+           f7Tab(tabName = 'Schedule', icon = 'event_available', active = FALSE,
+                 uiOutput('scheduleUI')
                  ),
            f7Tab(tabName = 'Attendees', icon = 'people', active = FALSE,
                  uiOutput('attendeesUI')
