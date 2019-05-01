@@ -4,94 +4,52 @@
 library(shiny)
 library(shinyF7)
 
-## new version of f7Tabs allows setting scrollable
-f7Tabs2 <- function(..., swipeable = FALSE, animated = TRUE, scrollable = FALSE) {
-  
-  if (swipeable && animated) stop("Cannot use two effects at the same time")
-  
-  toolbarItems <- list(...)
-  len <- length(toolbarItems)
-  found_active <- FALSE
-  
-  # toolbar items
-  toolbarTag <- f7Toolbar(
-    position = "bottom",
-    hairline = TRUE,
-    shadow = TRUE,
-    icons = TRUE,
-    scrollable = scrollable,
-    lapply(1:len, FUN = function(i) {
-      
-      item <- toolbarItems[[i]][[1]]
-      itemIcon <- toolbarItems[[i]][[2]]
-      itemName <- toolbarItems[[i]][[3]]
-      itemClass <- item$attribs$class
-      itemId <- item$attribs$id
-      
-      # make sure that if the user set 2 tabs active at the same time,
-      # only the first one is selected
-      if (!found_active) {
-        active <- sum(grep(x = itemClass, pattern = "active")) == 1
-        if (active) found_active <<- TRUE
-        # if there is already an active panel, set all other to inactive
-      } else {
-        active <- FALSE
-      }
-      
-      # generate the link
-      if (!is.null(itemIcon)) {
-        shiny::a(
-          href = paste0("#", itemId),
-          class = if (active) "tab-link tab-link-active" else "tab-link",
-          shiny::tags$i(class = "icon f7-icons ios-only", itemIcon),
-          shiny::tags$i(class = "icon material-icons md-only", itemIcon),
-          shiny::span(class = "tabbar-label", itemName)
-        )
-      } else {
-        shiny::a(
-          href = paste0("#", itemId),
-          class = if (active) "tab-link tab-link-active" else "tab-link",
-          itemName
-        )
-      }
-    })
-  )
-  
-  # related page content
-  contentTag <- shiny::tags$div(
-    class = "tabs ios-edges",
-    lapply(1:len, function(i) { toolbarItems[[i]][[1]]})
-  )
-  
-  # handle swipeable tabs
-  if (swipeable) {
-    contentTag <- shiny::tags$div(
-      class = "tabs-swipeable-wrap",
-      contentTag
-    )
-  }
-  
-  if (animated) {
-    contentTag <- shiny::tags$div(
-      class = "tabs-animated-wrap",
-      contentTag
-    )
-  }
-  
-  shiny::tagList(toolbarTag, contentTag)
-  
-}
+source('./shinyF7_extend.R')
 
-
+source('./modules/module_home.R')
+source('./modules/module_feed.R')
+source('./modules/module_profile.R')
 source('./modules/module_agenda.R')
+source('./modules/module_attendees.R')
+source('./modules/module_location.R')
 
 
 server <- function(input, output, session) {
+
+  ## Home Module
+  callModule(module_home, 'home')
+  output$homeUI <- renderUI({
+    module_homeUI('home')
+  })
+
+  ## Feed Module
+  callModule(module_feed, 'feed')
+  output$feedUI <- renderUI({
+    module_feedUI('feed')
+  })
+  
+  ## Profile Module
+  callModule(module_profile, 'profile')
+  output$profileUI <- renderUI({
+    module_profileUI('profile')
+  })
 
   ## Agenda Module
   callModule(module_agenda, 'agenda')
   output$agendaUI <- renderUI({
     module_agendaUI('agenda')
+  })
+  
+  ## Attendees Module
+  callModule(module_attendees, 'attendees')
+  output$attendeesUI <- renderUI({
+    module_attendeesUI('attendees')
+  })
+  
+  ## Location Module
+  callModule(module_location, 'location')
+  output$locationUI <- renderUI({
+    module_locationUI('location')
   })
   
 }
@@ -106,32 +64,32 @@ ui <- f7Page(
                   h4('this app was built using shinyf7'))
             )
     ),
-    f7Navbar(title = 'tabs', hairline = TRUE, shadow = TRUE, left_panel = TRUE, right_panel = FALSE),
+    f7Navbar(title = 'About', hairline = TRUE, shadow = TRUE, left_panel = TRUE, right_panel = FALSE),
     f7Tabs2(animated = TRUE, scrollable = TRUE,
            f7Tab(tabName = 'Home', icon = 'home', active = FALSE,
-                 f7Card(
-                   h4('home')
-                   )),
-           f7Tab(tabName = 'Feed', icon = 'list', active = FALSE,
-                 f7Card(
-                   h4('feed')
-                   )),
+                 f7Card(title = 'Home',
+                        uiOutput('homeUI')
+                        )),
+           f7Tab(tabName = 'feed', icon = 'list', active = FALSE,
+                 f7Card(title = 'feed',
+                        uiOutput('feedUI')
+                        )),
            f7Tab(tabName = 'Profile', icon = 'person', active = FALSE,
-                 f7Card(
-                   h4('profile')
-                   )),
+                 f7Card(title = 'Profile',
+                        uiOutput('profileUI')
+                        )),
            f7Tab(tabName = 'Agenda', icon = 'event_available', active = FALSE,
                  f7Card(title = 'Agenda',
                         uiOutput('agendaUI')
-                   )),
+                        )),
            f7Tab(tabName = 'Attendees', icon = 'people', active = FALSE,
-                 f7Card(
-                   h4('attendees')
-                 )),
+                 f7Card(title = 'Attendees',
+                        uiOutput('attendeesUI')
+                        )),
            f7Tab(tabName = 'Location', icon = 'place', active = FALSE,
-                 f7Card(
-                   h4('location')
-                   ))
+                 f7Card(title = 'Location',
+                        uiOutput('locationUI')
+                        ))
            )
     )
 )
