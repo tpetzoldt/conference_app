@@ -50,8 +50,7 @@ server <- function(input, output, session) {
   output$locationUI <- renderUI({
     module_locationUI('location')
   })
-  
-  tab_select(session, 'Location')
+
 }
 
 ui <- f7Page(
@@ -78,9 +77,8 @@ ui <- f7Page(
     f7Navbar(title = 'About', hairline = TRUE, shadow = TRUE, left_panel = TRUE, right_panel = FALSE),
     f7Tabs2(animated = TRUE, scrollable = TRUE,
            f7Tab(tabName = 'Home', icon = 'home', active = FALSE,
-                 f7Card(title = 'Home',
-                        uiOutput('homeUI')
-                        )),
+                 uiOutput('homeUI')
+                 ),
            f7Tab(tabName = 'Feed', icon = 'list', active = FALSE,
                  f7Card(title = 'feed',
                         uiOutput('feedUI')
