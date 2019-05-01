@@ -9,6 +9,8 @@ module_profileUI <- function(id) {
 ## server function for Profile Module
 module_profile <- function(input, output, session) {
   output$uiProfile <- renderUI({
-    h4('profile')
+    f7Card(title = 'Profile',
+           h4('profile')
+    )
   })
 }

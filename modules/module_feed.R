@@ -9,6 +9,8 @@ module_feedUI <- function(id) {
 ## server function for Feed Module
 module_feed <- function(input, output, session) {
   output$uiFeed <- renderUI({
-    h4('feed')
+    f7Card(title = 'feed',
+           h4('feed')
+    )
   })
 }

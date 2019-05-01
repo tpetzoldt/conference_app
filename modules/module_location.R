@@ -9,6 +9,8 @@ module_locationUI <- function(id) {
 ## server function for Location Module
 module_location <- function(input, output, session) {
   output$uiLocation <- renderUI({
-    h4('location')
+    f7Card(title = 'Location',
+           h4('location')
+    )
   })
 }

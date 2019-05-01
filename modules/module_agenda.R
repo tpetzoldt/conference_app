@@ -29,14 +29,16 @@ module_agenda <- function(input, output, session) {
         )
       )
     })
-    
-    f7Shadow(
-      intensity = 10,
-      hover = TRUE,
-      f7Accordion(
-        mode = 'list',
-        l.agenda_day
-      )
+
+    f7Card(title = 'Agenda',
+           f7Shadow(
+             intensity = 10,
+             hover = TRUE,
+             f7Accordion(
+               mode = 'list',
+               l.agenda_day
+               )
+             )
     )
   })
   

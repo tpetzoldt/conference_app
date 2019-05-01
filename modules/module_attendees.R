@@ -9,6 +9,8 @@ module_attendeesUI <- function(id) {
 ## server function for Attendees Module
 module_attendees <- function(input, output, session) {
   output$uiAttendees <- renderUI({
-    h4('attendees')
+    f7Card(title = 'Attendees',
+           h4('attendees')
+    )
   })
 }

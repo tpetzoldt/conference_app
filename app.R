@@ -80,25 +80,20 @@ ui <- f7Page(
                  uiOutput('homeUI')
                  ),
            f7Tab(tabName = 'Feed', icon = 'list', active = FALSE,
-                 f7Card(title = 'feed',
-                        uiOutput('feedUI')
-                        )),
+                 uiOutput('feedUI')
+                 ),
            f7Tab(tabName = 'Profile', icon = 'person', active = FALSE,
-                 f7Card(title = 'Profile',
-                        uiOutput('profileUI')
-                        )),
+                 uiOutput('profileUI')
+                 ),
            f7Tab(tabName = 'Agenda', icon = 'event_available', active = FALSE,
-                 f7Card(title = 'Agenda',
-                        uiOutput('agendaUI')
-                        )),
+                 uiOutput('agendaUI')
+                 ),
            f7Tab(tabName = 'Attendees', icon = 'people', active = FALSE,
-                 f7Card(title = 'Attendees',
-                        uiOutput('attendeesUI')
-                        )),
+                 uiOutput('attendeesUI')
+                 ),
            f7Tab(tabName = 'Location', icon = 'place', active = FALSE,
-                 f7Card(title = 'Location',
-                        uiOutput('locationUI')
-                        ))
+                 uiOutput('locationUI')
+                 )
            )
     )
 )
