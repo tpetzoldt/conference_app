@@ -13,7 +13,6 @@ source('./modules/module_agenda.R')
 source('./modules/module_attendees.R')
 source('./modules/module_location.R')
 
-
 server <- function(input, output, session) {
 
   ## Home Module
@@ -52,9 +51,21 @@ server <- function(input, output, session) {
     module_locationUI('location')
   })
   
+  session$sendCustomMessage("tab-select", 'Attendees')
 }
 
 ui <- f7Page(
+  
+  tags$head(
+    # javascript to select a tab
+    # to be moved to shinyF7
+    tags$script("
+      Shiny.addCustomMessageHandler('tab-select', function(tab) {
+        app.tab.show('#' + tab);
+      });
+    ")
+  ),
+  
   title = 'Conference App',
   f7Init(theme = 'md'),
   f7TabLayout(
@@ -70,7 +81,7 @@ ui <- f7Page(
                  f7Card(title = 'Home',
                         uiOutput('homeUI')
                         )),
-           f7Tab(tabName = 'feed', icon = 'list', active = FALSE,
+           f7Tab(tabName = 'Feed', icon = 'list', active = FALSE,
                  f7Card(title = 'feed',
                         uiOutput('feedUI')
                         )),
