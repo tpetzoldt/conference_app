@@ -9,11 +9,14 @@ module_attendeesUI <- function(id) {
 ## server function for Attendees Module
 module_attendees <- function(input, output, session, pool) {
   
+  ns <- session$ns
+  
   df_users <- dbReadTable(pool, 'users') %>%
     select(id, name) %>%
     mutate(grouping = substr(name, 1, 1))
   l_users <- split.data.frame(df_users, df_users$grouping)
   
+
   output$uiAttendees <- renderUI({
     f7Card(title = 'Attendees',
            ## attendees list (framework 7 contact list)
@@ -28,7 +31,8 @@ module_attendees <- function(input, output, session, pool) {
                                        tags$li(
                                          tags$div(class = 'item-content',
                                                   tags$div(class = 'item-inner',
-                                                           tags$div(class = 'item-title', as.character(x['name']))
+                                                           ## on click, update a shiny variable with the id of current selected user
+                                                           tags$div(class = 'item-title', as.character(x['name']), onclick = paste0('Shiny.setInputValue("', ns('selected_contact'), '", ', x['id'], ', {priority: "event"})'))
                                                            )
                                                   )
                                          )
@@ -41,4 +45,10 @@ module_attendees <- function(input, output, session, pool) {
                     )
            )
   })
+  
+  observeEvent(input$selected_contact, {
+    user_name <- df_users[df_users$id == input$selected_contact, ]$name
+    session$sendCustomMessage("show_user", paste0('User: ', user_name))
+  })
+  
 }

@@ -71,6 +71,11 @@ ui <- f7Page(
       Shiny.addCustomMessageHandler('tab-select', function(tab) {
         app.tab.show('#' + tab);
       });
+      
+      Shiny.addCustomMessageHandler('show_user', function(name) {
+        alert(name);
+      });
+
     ")
   ),
   
