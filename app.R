@@ -4,6 +4,7 @@
 library(shiny)
 library(shinyF7)
 library(pool)
+library(dplyr)
 
 pool <- dbPool(
   drv = RSQLite::SQLite(),
@@ -48,7 +49,7 @@ server <- function(input, output, session) {
   })
   
   ## Attendees Module
-  callModule(module_attendees, 'attendees')
+  callModule(module_attendees, 'attendees', pool)
   output$attendeesUI <- renderUI({
     module_attendeesUI('attendees')
   })
