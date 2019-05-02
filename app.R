@@ -3,6 +3,14 @@
 
 library(shiny)
 library(shinyF7)
+library(pool)
+
+pool <- dbPool(
+  drv = RSQLite::SQLite(),
+  dbname = 'conference_app.sqlite'
+)
+
+user <- 'daniel davies'
 
 source('./shinyF7_extend.R')
 
@@ -28,7 +36,7 @@ server <- function(input, output, session) {
   })
   
   ## Profile Module
-  callModule(module_profile, 'profile')
+  callModule(module_profile, 'profile', pool, user)
   output$profileUI <- renderUI({
     module_profileUI('profile')
   })
