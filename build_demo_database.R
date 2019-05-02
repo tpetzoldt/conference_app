@@ -3,11 +3,11 @@
 library(DBI)
 
 df_users <- data.frame(
-  name = c('alice adams', 'bob barnes', 'charlie croker', 'daniel davies', 'edward edwards'),
-  email = c('alice.adams@my_company.com', 'bob.barnes@my_company.com', 'charlie.croker@my_company.com', 'daniel.davies@another_company.com', 'edward.edwards@another_company.com'),
-  affiliation = c(rep('my_company', 3), rep('another_company', 2)),
-  bio = c('alice bio', 'bob bio', rep('', 3)),
-  photo = rep('', 5),
+  name = c('alice adams', 'arthur adams', 'bob barnes', 'charlie croker', 'daniel davies', 'edward edwards'),
+  email = c('alice.adams@my_company.com', 'arthur.adams@my_company.com', 'bob.barnes@my_company.com', 'charlie.croker@my_company.com', 'daniel.davies@another_company.com', 'edward.edwards@another_company.com'),
+  affiliation = c(rep('my_company', 4), rep('another_company', 2)),
+  bio = c('alice bio', '', 'bob bio', rep('', 3)),
+  photo = rep('', 6),
   stringsAsFactors = FALSE
 )
 
@@ -20,6 +20,9 @@ df_schedule <- data.frame(
 
 ## open database
 db <- dbConnect(RSQLite::SQLite(), "conference_app.sqlite")
+
+if(dbExistsTable(db, 'users')) dbRemoveTable(db, 'users')
+if(dbExistsTable(db, 'schedule')) dbRemoveTable(db, 'schedule')
 
 ## create tables
 dbExecute(db, "
