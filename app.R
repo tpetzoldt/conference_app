@@ -67,7 +67,7 @@ ui <- f7Page(
   tags$head(
     # javascript to select a tab
     # to be moved to shinyF7
-    tags$script("
+    tags$script(HTML("
       Shiny.addCustomMessageHandler('tab-select', function(tab) {
         app.tab.show('#' + tab);
       });
@@ -76,7 +76,7 @@ ui <- f7Page(
         alert(name);
       });
 
-    ")
+    "))
   ),
   
   title = 'Conference App',
