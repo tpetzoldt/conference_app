@@ -16,6 +16,7 @@ r_packages:
   - shiny
   - pool
   - tidyverse
-  - shinyF7
+r_github_packages:
+  - RinteRface/shinyF7
 script:
 - R -f deploy.R

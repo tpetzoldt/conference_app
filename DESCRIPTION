@@ -1,3 +1,2 @@
 Package: ConferenceApp
 Type: Shiny
-Remotes: github::RinteRface/shinyF7
