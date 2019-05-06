@@ -16,5 +16,6 @@ r_packages:
   - shiny
   - pool
   - tidyverse
+  - shinyF7
 script:
 - R -f deploy.R
