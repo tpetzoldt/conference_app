@@ -12,5 +12,16 @@ setAccountInfo(name   = "epijimapps",
                token  = Sys.getenv("shinyapps_token"),
                secret = Sys.getenv("shinyapps_secret"))
 
+# app_files 
+  files <- c(
+    "app.R",
+    "conference_app.sqlite",
+    "shinyF7_extend.R",
+    list.files("modules")
+  )
+
 # Deploy the application.
-deployApp()
+deployApp(
+  forceUpdate = TRUE,
+  appFiles = files
+)
