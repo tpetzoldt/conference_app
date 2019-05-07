@@ -13,11 +13,13 @@ setAccountInfo(name   = "epijimapps",
                secret = Sys.getenv("shinyapps_secret"))
 
 # app_files 
+  get_files_dir <- function(path) paste0(path,list.files(path))
+
   files <- c(
     "app.R",
-    "conference_app.sqlite",
+    "data/conference_app.sqlite",
     "shinyF7_extend.R",
-    (function(path) paste0(path,list.files(path)))("modules/")
+    get_files_dir("modules/")
   )
 
 # Deploy the application.

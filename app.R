@@ -10,7 +10,7 @@ print(file.exists('conference_app.sqlite'))
 
 pool <- dbPool(
   drv = RSQLite::SQLite(),
-  dbname = 'conference_app.sqlite'
+  dbname = 'data/conference_app.sqlite'
 )
 
 user <- 'daniel davies'
