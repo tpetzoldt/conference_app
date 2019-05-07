@@ -17,7 +17,7 @@ setAccountInfo(name   = "epijimapps",
     "app.R",
     "conference_app.sqlite",
     "shinyF7_extend.R",
-    list.files("modules")
+    (function(path) paste0(path,list.files(path)))("modules/")
   )
 
 # Deploy the application.
