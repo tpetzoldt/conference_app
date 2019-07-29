@@ -4,7 +4,6 @@ library(rsconnect)
 # before publishing so deployApp() knows what is necessary.
 library(shiny)
 library(shinyF7)
-library(pool)
 library(tidyverse)
 
 # Set the account info for deployment.
@@ -17,7 +16,8 @@ setAccountInfo(name   = "epijimapps",
 
   files <- c(
     "app.R",
-    "data/conference_app.sqlite",
+    "data/df_schedule.csv",
+    "data/df_users.csv",
     "shinyF7_extend.R",
     get_files_dir("modules/")
   )

@@ -7,14 +7,13 @@ module_attendeesUI <- function(id) {
 }
 
 ## server function for Attendees Module
-module_attendees <- function(input, output, session, pool) {
+module_attendees <- function(input, output, session, df_users) {
   
   ns <- session$ns
   
-  df_users <- dbReadTable(pool, 'users') %>%
-    select(id, name) %>%
-    mutate(grouping = substr(name, 1, 1))
-  l_users <- split.data.frame(df_users, df_users$grouping)
+  df.users <- df_users %>%
+    mutate(grouping = substr(Name, 1, 1))
+  l_users <- split.data.frame(df.users, df.users$grouping)
   
 
   output$uiAttendees <- renderUI({
@@ -32,7 +31,7 @@ module_attendees <- function(input, output, session, pool) {
                                          tags$div(class = 'item-content',
                                                   tags$div(class = 'item-inner',
                                                            ## on click, update a shiny variable with the id of current selected user
-                                                           tags$div(class = 'item-title', as.character(x['name']), onclick = paste0('Shiny.setInputValue("', ns('selected_contact'), '", ', x['id'], ', {priority: "event"})'))
+                                                           tags$div(class = 'item-title', as.character(x['Name']), onclick = paste0('Shiny.setInputValue("', ns('selected_contact'), '", ', x['id'], ', {priority: "event"})'))
                                                            )
                                                   )
                                          )
