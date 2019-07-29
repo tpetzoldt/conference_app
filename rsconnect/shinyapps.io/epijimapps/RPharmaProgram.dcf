@@ -1,0 +1,13 @@
+name: RPharmaProgram
+title: RPharmaProgram
+username:
+account: epijimapps
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 912978
+bundleId: 2064487
+url: https://epijimapps.shinyapps.io/RPharmaProgram/
+when: 1557167553.64928
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .travis.yml|deploy.R|DESCRIPTION
