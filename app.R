@@ -3,23 +3,17 @@
 
 library(shiny)
 library(shinyF7)
-library(pool)
-library(dplyr)
+library(tidyverse)
 
-print(file.exists('data/conference_app.sqlite'))
+df_schedule <- read_csv('./data/df_schedule.csv')
+df_users <- read_csv('./data/df_users.csv')
 
-pool <- dbPool(
-  drv = RSQLite::SQLite(),
-  dbname = 'data/conference_app.sqlite'
-)
-
-user <- 'daniel davies'
 
 source('./shinyF7_extend.R')
 
 source('./modules/module_home.R')
 source('./modules/module_feed.R')
-source('./modules/module_profile.R')
+#source('./modules/module_profile.R') # currently no personal profile
 source('./modules/module_schedule.R')
 source('./modules/module_attendees.R')
 source('./modules/module_location.R')
@@ -39,10 +33,10 @@ server <- function(input, output, session) {
   })
   
   ## Profile Module
-  callModule(module_profile, 'profile', pool, user)
-  output$profileUI <- renderUI({
-    module_profileUI('profile')
-  })
+  # callModule(module_profile, 'profile', pool, user)
+  # output$profileUI <- renderUI({
+  #   module_profileUI('profile')
+  # })
 
   ## Agenda Module
   callModule(module_schedule, 'schedule')
@@ -51,7 +45,7 @@ server <- function(input, output, session) {
   })
   
   ## Attendees Module
-  callModule(module_attendees, 'attendees', pool)
+  callModule(module_attendees, 'attendees', df_users)
   output$attendeesUI <- renderUI({
     module_attendeesUI('attendees')
   })
@@ -74,8 +68,8 @@ ui <- f7Page(
         app.tab.show('#' + tab);
       });
       
-      Shiny.addCustomMessageHandler('show_user', function(name) {
-        alert(name);
+      Shiny.addCustomMessageHandler('show_user', function(Name) {
+        alert(Name);
       });
 
     "))
@@ -98,9 +92,9 @@ ui <- f7Page(
            f7Tab(tabName = 'Feed', icon = 'list', active = FALSE,
                  uiOutput('feedUI')
                  ),
-           f7Tab(tabName = 'Profile', icon = 'person', active = FALSE,
-                 uiOutput('profileUI')
-                 ),
+           # f7Tab(tabName = 'Profile', icon = 'person', active = FALSE,
+           #       uiOutput('profileUI')
+           #       ),
            f7Tab(tabName = 'Schedule', icon = 'event_available', active = FALSE,
                  uiOutput('scheduleUI')
                  ),
