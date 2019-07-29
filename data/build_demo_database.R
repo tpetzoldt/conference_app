@@ -1,5 +1,7 @@
 ## create a sqlite database for demo purposes
 
+if (basename(getwd()) != "data") stop("setwd() to 'data' pre running scripts")
+
 library(DBI)
 
 df_users <- data.frame(
