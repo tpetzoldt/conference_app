@@ -39,7 +39,7 @@ server <- function(input, output, session) {
   # })
 
   ## Agenda Module
-  callModule(module_schedule, 'schedule')
+  callModule(module_schedule, 'schedule', df_schedule)
   output$scheduleUI <- renderUI({
     module_scheduleUI('schedule')
   })
