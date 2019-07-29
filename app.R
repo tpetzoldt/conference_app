@@ -6,7 +6,7 @@ library(shinyF7)
 library(pool)
 library(dplyr)
 
-print(file.exists('conference_app.sqlite'))
+print(file.exists('data/conference_app.sqlite'))
 
 pool <- dbPool(
   drv = RSQLite::SQLite(),
