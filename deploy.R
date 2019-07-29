@@ -11,6 +11,7 @@ setAccountInfo(name   = "epijimapps",
                token  = Sys.getenv("shinyapps_token"),
                secret = Sys.getenv("shinyapps_secret"))
 
+
 # app_files 
   get_files_dir <- function(path) paste0(path,list.files(path))
 
