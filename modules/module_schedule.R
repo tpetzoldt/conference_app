@@ -7,22 +7,35 @@ module_scheduleUI <- function(id) {
 }
 
 ## server function for Schedule Module
-module_schedule <- function(input, output, session) {
+module_schedule <- function(input, output, session, df_schedule) {
   
   output$uiSchedule <- renderUI({
     l.schedule <- split.data.frame(df_schedule, df_schedule$Date)
     l.schedule_day <- lapply(seq_along(l.schedule), function(i) {
+      
       f7AccordionItem(
         title = names(l.schedule)[i],
         tagList(
           apply(l.schedule[[i]], 1, function(y) {
-            f7Row(em(y['Time'], style = 'color: #0D47A1'), 
-                  HTML('&nbsp;'),HTML('&nbsp;'),
-                  em(y['ScheduleTitle']), 
-                  br(), 
-                  p(y['Abstract']), 
-                  hr()
-                  )
+            if (is.na(y['Abstract'])) {
+              f7Row(em(y['Time'], style = 'color: #0D47A1'), 
+                    HTML('&nbsp;'),HTML('&nbsp;'),
+                    em(paste0("[",y['Room'],"]"), style = 'color: #0D47A1'),
+                    HTML('&nbsp;'),HTML('&nbsp;'),
+                    em(y['ScheduleTitle']),
+                    hr())
+            } else {
+              f7Row(em(y['Time'], style = 'color: #0D47A1'), 
+                    HTML('&nbsp;'),HTML('&nbsp;'),
+                    em(paste0("[",y['Room'],"]"), style = 'color: #0D47A1'),
+                    HTML('&nbsp;'),HTML('&nbsp;'),
+                    em(y['ScheduleTitle']), 
+                    br(), 
+                    p(y['Abstract']), 
+                    hr()
+              )              
+            }
+
           })
         )
       )

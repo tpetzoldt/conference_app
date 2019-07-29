@@ -80,7 +80,7 @@ library(tidyverse)
     mutate(
       # make it easier to write to paste
       Abstract = case_when(
-        is.na(Abstract) ~ "",
+        is.na(Abstract) ~ " ",
         TRUE ~ Abstract
       ),
       # add in a 'combined title and author
