@@ -70,6 +70,9 @@ library(tidyverse)
     select(
       Name,
       Affiliation = Company
+    ) %>%
+    mutate(
+      Phonebook = paste0(Name," (",Affiliation,")")
     )
 
   df_schedule <- schedule_data %>%
