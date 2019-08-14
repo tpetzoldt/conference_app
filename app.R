@@ -78,12 +78,12 @@ ui <- f7Page(
   title = 'R/Pharma 2019',
   f7Init(theme = 'md'),
   f7TabLayout(
-    f7Panel(title = "About", side = "left", theme = "light", style = "cover",
+    panels = f7Panel(title = "About", side = "left", theme = "light", style = "cover",
             f7Row(
               f7Button(color = "blue", label = "rinpharma.com", src = "http://rinpharma.com")
             )
     ),
-    f7Navbar(title = 'R/Pharma conference app', hairline = TRUE, shadow = TRUE, left_panel = TRUE, right_panel = FALSE),
+    navbar = f7Navbar(title = 'R/Pharma conference app', hairline = TRUE, shadow = TRUE, left_panel = TRUE, right_panel = FALSE),
     f7Tabs2(animated = TRUE, scrollable = TRUE,
            f7Tab(tabName = 'Home', icon = 'home', active = FALSE,
                  uiOutput('homeUI')
