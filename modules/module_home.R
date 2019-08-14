@@ -14,7 +14,7 @@ module_home <- function(input, output, session) {
   output$uiHome <- renderUI({
     buttons <- list (
       list(name = 'Feed', icon = 'list'),
-      list(name = 'Profile', icon = 'person'),
+      #list(name = 'Profile', icon = 'person'),
       list(name = 'Schedule', icon = 'event_available'),
       list(name = 'Attendees', icon = 'people'), 
       list(name = 'Location', icon = 'place')
@@ -44,9 +44,9 @@ module_home <- function(input, output, session) {
     tab_select(session, 'Feed')
   })
   
-  observeEvent(input$but_Profile, {
-    tab_select(session, 'Profile')
-  })
+  # observeEvent(input$but_Profile, {
+  #   tab_select(session, 'Profile')
+  # })
   
   observeEvent(input$but_Schedule, {
     tab_select(session, 'Schedule')

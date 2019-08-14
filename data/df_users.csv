@@ -1,123 +1,142 @@
-Name,Affiliation
-Michael Lawrence,Roche / Genentech
-James Black,Roche
-Ed Lauzier,Merck
-Bella Feng,Gilead
-John Sims,Pfizer
-Min Lee,Amgen
-Harvey Lieberman,Sanofi
-Jason Stevens,BMS
-Rose Grandy,Abbott
-Yilong Zhang,Merck
-Boyd Gonnerman,Pfizer
-Ian Wallace,Celgene
-Dillon McCalmon,Boehringer Ingelheim
-Yi Wang,Pfizer
-Reinhold Koch,Roche / Genentech
-Elena Rantou,FDA
-Keaven Anderson,Merck
-Alun Bedding,Roche
-Marianna Foos,NA
-Abhik Seal,Abbvie
-Pragathi Kotha Venkata,GSK
-Aedin Culhane,Dana-Farber
-Gianna Huang,Gilead
-Jem Chang,Pharmacyclics
-Debbie Morreall,University of Utah
-Xiao Ni,Novartis
-Yihan Jiang,Gilead
-Andy Nicholls,Glaxosmithkline
-Paul Schuette,FDA
-Will Landau,Lilly
-Paulo Bargo,Johnson & Johnson
-Ting-Yu Liu,Pharmacyclics
-Adrian Waddell,Roche
-Pavan Vaddady,Merck
-Bob Engle,Biogen
-Phil Bowsher,RStudio
-Kate Ostbye,Fred Hutch
-Garrett Grolemund,RStudio
-Volha Tryputsen,Johnson & Johnson
-Max Kuhn,RStudio
-Satish Murthy,Johnson & Johnson
-Regis James,Regeneron
-Neby Beleke,Gilead
-Vincent Shen,Roche
-"Walls, Robert",Roche
-Hanni Willenbrock,Novo Nordisk
-Greg Campbell,Gilead
-Chase Clark,University of Illinois at Chicago
-Quan Wan,Sanofi
-Nathaniel Phillips,Roche
-Juha-Pekka Perttola,Roche
-Gordon Turner,Novartis
-Michael Martinec,Roche
-Michael Steeves,Bioteam
-Fairouz Makhlouf,FDA
-Kelly O'Briant,RStudio
-Melvin Munsaka,Abbvie
-Steven Martin,Pfizer
-Michael Blanks,Beigene
-Elizabeth Hess,IQSS Harvard
-Will Harris,Genentech
-Eric Nantz,Eli Lily
-Nam Hee Choi,FDA
-Julianne Manitz,Merck
-Jessica Myers Franklin,Harvard
-Marcus Adams,Merck
-Doug Kelkhoff,Roche/Genentech
-Romi Admanit,Biogen
-Nate Mockler,Biogen
-Bo Wang,Biogen
-Marianna Grinberg,Merck
-Ryan Gan,Genentech
-Li Zheng,Roche
-Becca Krouse,Rho
-Joost Groot,Biogen
-Madeleine Gastonguay,Metrum
-Jeannine Fisher,Metrum
-Mark Rothe,Sanofi
-Matt Austin,Amgen
-Jeffrey Zimmerman,PPDI
-David James,Novartis
-Joseph Rickert,RStudio
-Rena Yang,Genentech
-Nina Qi,Roche/Genentech
-Alison Margosikee,Novartis
-David Cooper,GSK
-Jessica Higgins,New Ventura
-Sumesh Kalappurakal,Johnson & Johnson
-Brian Waterhouse,Abbvie
-Sairam Gorthi,Johnson & Johnson
-Greg Cicconetti,Abbvie
-Ryan Spilker,Merck
-Linna Liu,Abbott
-Axel Muehlig,Johnson & Johnson
-Geoffrey Hannigan,Merck
-Bill Pikounis,Johnson & Johnson
-Rajeshwar Malathker,Johnson & Johnson
-Stefan Englert,Abbvie
-Vivian Zhuang,FDA
-Shannon Lewis,Beigene
-Kimberly Ohn,Beigene
-Huilei Xu,Novartis
-Alan Hopkins,Beigene
-Eric Milliman,Biogen
-David Lyder,Metrum
-Jaishri Alladi,Johnson & Johnson
-Clement Benamara,Roche
-Eric Anderson,Metrum
-Himanshu Pandya,Biogen
-Jinesh Shah,CSL Behring
-Theresa Yuraszeck,CSL Behring
-Anthony Williams,Fred Hutch
-Martin Klein,FDA
-Craig Brelage,Eli Lilly
-William Henner,Abbvie
-Ying Jiang,Alkermes
-Jerald Schindler,Alkermes
-Chong Hoon Kim,Diversity Grant
-Natalie DelRocco,Diversity Grant
-Estella Dong,Diversity Grant
-Yanan Huo,Diversity Grant
-Josh Kraut,Flatiron
+Name,Affiliation,Phonebook
+Michael Lawrence,Roche / Genentech,Michael Lawrence (Roche / Genentech)
+James Black,Roche / Genentech,James Black (Roche / Genentech)
+Ed Lauzier,Merck,Ed Lauzier (Merck)
+Bella Feng,Gilead,Bella Feng (Gilead)
+John Sims,Pfizer,John Sims (Pfizer)
+Min Lee,Amgen,Min Lee (Amgen)
+Harvey Lieberman,Sanofi,Harvey Lieberman (Sanofi)
+Jason Stevens,BMS,Jason Stevens (BMS)
+Rose Grandy,Abbott,Rose Grandy (Abbott)
+Yilong Zhang,Merck,Yilong Zhang (Merck)
+Boyd Gonnerman,Pfizer,Boyd Gonnerman (Pfizer)
+Ian Wallace,Celgene,Ian Wallace (Celgene)
+Dillon McCalmon,Boehringer Ingelheim,Dillon McCalmon (Boehringer Ingelheim)
+Yi Wang,Pfizer,Yi Wang (Pfizer)
+Reinhold Koch,Roche / Genentech,Reinhold Koch (Roche / Genentech)
+Elena Rantou,FDA,Elena Rantou (FDA)
+Keaven Anderson,Merck,Keaven Anderson (Merck)
+Alun Bedding,Roche / Genentech,Alun Bedding (Roche / Genentech)
+Marianna Foos,bluebirdbio,Marianna Foos (bluebirdbio)
+Abhik Seal,Abbvie,Abhik Seal (Abbvie)
+Pragathi Kotha Venkata,GSK,Pragathi Kotha Venkata (GSK)
+Aedin Culhane,Dana-Farber,Aedin Culhane (Dana-Farber)
+Gianna Huang,Gilead,Gianna Huang (Gilead)
+Jem Chang,Pharmacyclics,Jem Chang (Pharmacyclics)
+Debbie Morreall,University of Utah,Debbie Morreall (University of Utah)
+Xiao Ni,Novartis,Xiao Ni (Novartis)
+Yihan Jiang,Gilead,Yihan Jiang (Gilead)
+Andy Nicholls,GSK,Andy Nicholls (GSK)
+Paul Schuette,FDA,Paul Schuette (FDA)
+Will Landau,Eli Lilly,Will Landau (Eli Lilly)
+Paulo Bargo,Johnson & Johnson,Paulo Bargo (Johnson & Johnson)
+Ting-Yu Liu,Pharmacyclics,Ting-Yu Liu (Pharmacyclics)
+Adrian Waddell,Roche / Genentech,Adrian Waddell (Roche / Genentech)
+Pavan Vaddady,Merck,Pavan Vaddady (Merck)
+Bob Engle,Biogen,Bob Engle (Biogen)
+Phil Bowsher,RStudio,Phil Bowsher (RStudio)
+Kate Ostbye,Fred Hutch,Kate Ostbye (Fred Hutch)
+Garrett Grolemund,RStudio,Garrett Grolemund (RStudio)
+Volha Tryputsen,Johnson & Johnson,Volha Tryputsen (Johnson & Johnson)
+Max Kuhn,RStudio,Max Kuhn (RStudio)
+Satish Murthy,Johnson & Johnson,Satish Murthy (Johnson & Johnson)
+Regis James,Regeneron,Regis James (Regeneron)
+Neby Beleke,Gilead,Neby Beleke (Gilead)
+Vincent Shen,Roche / Genentech,Vincent Shen (Roche / Genentech)
+"Walls, Robert",Roche / Genentech,"Walls, Robert (Roche / Genentech)"
+Greg Campbell,Gilead,Greg Campbell (Gilead)
+Chase Clark,University of Illinois at Chicago,Chase Clark (University of Illinois at Chicago)
+Quan Wan,Sanofi,Quan Wan (Sanofi)
+Nathaniel Phillips,Roche / Genentech,Nathaniel Phillips (Roche / Genentech)
+Juha-Pekka Perttola,Roche / Genentech,Juha-Pekka Perttola (Roche / Genentech)
+Gordon Turner,Novartis,Gordon Turner (Novartis)
+Michael Martinec,Roche / Genentech,Michael Martinec (Roche / Genentech)
+Michael Steeves,Bioteam,Michael Steeves (Bioteam)
+Fairouz Makhlouf,FDA,Fairouz Makhlouf (FDA)
+Kelly O'Briant,RStudio,Kelly O'Briant (RStudio)
+Melvin Munsaka,Abbvie,Melvin Munsaka (Abbvie)
+Steven Martin,Pfizer,Steven Martin (Pfizer)
+Michael Blanks,Beigene,Michael Blanks (Beigene)
+Elizabeth Hess,IQSS Harvard,Elizabeth Hess (IQSS Harvard)
+Eric Nantz,Eli Lilly,Eric Nantz (Eli Lilly)
+Nam Hee Choi,FDA,Nam Hee Choi (FDA)
+Julianne Manitz,Merck,Julianne Manitz (Merck)
+Jessica Myers Franklin,Harvard,Jessica Myers Franklin (Harvard)
+Marcus Adams,Merck,Marcus Adams (Merck)
+Doug Kelkhoff,Roche / Genentech,Doug Kelkhoff (Roche / Genentech)
+Romi Admanit,Biogen,Romi Admanit (Biogen)
+Nate Mockler,Biogen,Nate Mockler (Biogen)
+Bo Wang,Biogen,Bo Wang (Biogen)
+Marianna Grinberg,Merck,Marianna Grinberg (Merck)
+Ryan Gan,Roche / Genentech,Ryan Gan (Roche / Genentech)
+Li Zheng,Roche / Genentech,Li Zheng (Roche / Genentech)
+Becca Krouse,Rho,Becca Krouse (Rho)
+Joost Groot,Biogen,Joost Groot (Biogen)
+Madeleine Gastonguay,Metrum,Madeleine Gastonguay (Metrum)
+Jeannine Fisher,Metrum,Jeannine Fisher (Metrum)
+Mark Rothe,Sanofi,Mark Rothe (Sanofi)
+Matt Austin,Amgen,Matt Austin (Amgen)
+David James,Novartis,David James (Novartis)
+Joseph Rickert,RStudio,Joseph Rickert (RStudio)
+Rena Yang,Roche / Genentech,Rena Yang (Roche / Genentech)
+Nina Qi,Roche / Genentech,Nina Qi (Roche / Genentech)
+Alison Margosikee,Novartis,Alison Margosikee (Novartis)
+David Cooper,GSK,David Cooper (GSK)
+Jessica Higgins,New Ventura,Jessica Higgins (New Ventura)
+Sumesh Kalappurakal,Johnson & Johnson,Sumesh Kalappurakal (Johnson & Johnson)
+Brian Waterhouse,Abbvie,Brian Waterhouse (Abbvie)
+Sairam Gorthi,Johnson & Johnson,Sairam Gorthi (Johnson & Johnson)
+Greg Cicconetti,Abbvie,Greg Cicconetti (Abbvie)
+Ryan Spilker,Merck,Ryan Spilker (Merck)
+Linna Liu,Abbott,Linna Liu (Abbott)
+Axel Muehlig,Johnson & Johnson,Axel Muehlig (Johnson & Johnson)
+Geoffrey Hannigan,Merck,Geoffrey Hannigan (Merck)
+Bill Pikounis,Johnson & Johnson,Bill Pikounis (Johnson & Johnson)
+Rajeshwar Malathker,Johnson & Johnson,Rajeshwar Malathker (Johnson & Johnson)
+Stefan Englert,Abbvie,Stefan Englert (Abbvie)
+Vivian Zhuang,FDA,Vivian Zhuang (FDA)
+Shannon Lewis,Beigene,Shannon Lewis (Beigene)
+Kimberly Ohn,Beigene,Kimberly Ohn (Beigene)
+Huilei Xu,Novartis,Huilei Xu (Novartis)
+Alan Hopkins,Beigene,Alan Hopkins (Beigene)
+Eric Milliman,Biogen,Eric Milliman (Biogen)
+David Lyder,Metrum,David Lyder (Metrum)
+Jaishri Alladi,Johnson & Johnson,Jaishri Alladi (Johnson & Johnson)
+Clement Benamara,Roche / Genentech,Clement Benamara (Roche / Genentech)
+Eric Anderson,Metrum,Eric Anderson (Metrum)
+Himanshu Pandya,Biogen,Himanshu Pandya (Biogen)
+Jinesh Shah,CSL Behring,Jinesh Shah (CSL Behring)
+Theresa Yuraszeck,CSL Behring,Theresa Yuraszeck (CSL Behring)
+Anthony Williams,Fred Hutch,Anthony Williams (Fred Hutch)
+Martin Klein,FDA,Martin Klein (FDA)
+Craig Brelage,Eli Lilly,Craig Brelage (Eli Lilly)
+William Henner,Abbvie,William Henner (Abbvie)
+Ying Jiang,Alkermes,Ying Jiang (Alkermes)
+Jerald Schindler,Alkermes,Jerald Schindler (Alkermes)
+Chong Hoon Kim,Diversity Grant,Chong Hoon Kim (Diversity Grant)
+Natalie DelRocco,Diversity Grant,Natalie DelRocco (Diversity Grant)
+Estella Dong,Diversity Grant,Estella Dong (Diversity Grant)
+Yanan Huo,Diversity Grant,Yanan Huo (Diversity Grant)
+Josh Kraut,Flatiron,Josh Kraut (Flatiron)
+Douglas Robinson,Novartis,Douglas Robinson (Novartis)
+Kathleen Wendt,Colorado State University,Kathleen Wendt (Colorado State University)
+Lin Swan,Pfizer,Lin Swan (Pfizer)
+Jae Eun Ahn,Pfizer,Jae Eun Ahn (Pfizer)
+Seda Arat,Pfizer,Seda Arat (Pfizer)
+Eunice Ndungu,Merck,Eunice Ndungu (Merck)
+Woodrow Burchett,Pfizer,Woodrow Burchett (Pfizer)
+Vamsidhar Kota,Biogen,Vamsidhar Kota (Biogen)
+Erik Buunk,Harvard,Erik Buunk (Harvard)
+Marly Cormar,RStudio,Marly Cormar (RStudio)
+Maria Elena Morales,Vertex,Maria Elena Morales (Vertex)
+Jeonifer Garren,Pfizer,Jeonifer Garren (Pfizer)
+Leigh Alexander,SomaLogic,Leigh Alexander (SomaLogic)
+Andrew Hill,Pfizer,Andrew Hill (Pfizer)
+Carson Sievert,RStudio,Carson Sievert (RStudio)
+Kevin Snyder,FDA,Kevin Snyder (FDA)
+Ning Leng,Roche / Genentech,Ning Leng (Roche / Genentech)
+Mirjam Trame,Novartis,Mirjam Trame (Novartis)
+Ellis Hughes,Fred Hutch,Ellis Hughes (Fred Hutch)
+Daniel Boisvert,Biogen,Daniel Boisvert (Biogen)
+Devin Pastoor,Metrum,Devin Pastoor (Metrum)
+Heng Wang,Roche / Genentech,Heng Wang (Roche / Genentech)

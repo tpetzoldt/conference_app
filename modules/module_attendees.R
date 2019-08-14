@@ -31,7 +31,7 @@ module_attendees <- function(input, output, session, df_users) {
                                          tags$div(class = 'item-content',
                                                   tags$div(class = 'item-inner',
                                                            ## on click, update a shiny variable with the id of current selected user
-                                                           tags$div(class = 'item-title', as.character(x['Name']), onclick = paste0('Shiny.setInputValue("', ns('selected_contact'), '", ', x['id'], ', {priority: "event"})'))
+                                                           tags$div(class = 'item-title', as.character(x['Phonebook']), onclick = paste0('Shiny.setInputValue("', ns('selected_contact'), '", ', x['id'], ', {priority: "event"})'))
                                                            )
                                                   )
                                          )

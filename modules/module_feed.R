@@ -9,8 +9,10 @@ module_feedUI <- function(id) {
 ## server function for Feed Module
 module_feed <- function(input, output, session) {
   output$uiFeed <- renderUI({
-    f7Card(title = 'feed',
-           h4('feed')
+    f7Card(title = 'Feed',
+           h4('Welcome to R/Pharma'),
+           p("This app is specifically designed for mobiles."),
+           p("The app on the main rinpharma.com page will better suit larger devices.")
     )
   })
 }
