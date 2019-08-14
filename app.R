@@ -13,7 +13,7 @@ source('./shinyF7_extend.R')
 
 source('./modules/module_home.R')
 source('./modules/module_schedule.R')
-source('./modules/module_feed.R')
+# source('./modules/module_feed.R')  # remove feed - currently not used
 #source('./modules/module_profile.R') # currently no personal profile
 source('./modules/module_attendees.R')
 source('./modules/module_location.R')
@@ -32,11 +32,11 @@ server <- function(input, output, session) {
     module_scheduleUI('schedule')
   })
 
-  ## Feed Module
-  callModule(module_feed, 'feed')
-  output$feedUI <- renderUI({
-    module_feedUI('feed')
-  })
+  # ## Feed Module
+  # callModule(module_feed, 'feed')
+  # output$feedUI <- renderUI({
+  #   module_feedUI('feed')
+  # })
   
   ## Profile Module
   # callModule(module_profile, 'profile', pool, user)
@@ -88,9 +88,9 @@ ui <- f7Page(
            f7Tab(tabName = 'Home', icon = 'home', active = FALSE,
                  uiOutput('homeUI')
                  ),
-           f7Tab(tabName = 'Feed', icon = 'list', active = FALSE,
-                 uiOutput('feedUI')
-                 ),
+           # f7Tab(tabName = 'Feed', icon = 'list', active = FALSE,
+           #       uiOutput('feedUI')
+           #       ),
            # f7Tab(tabName = 'Profile', icon = 'person', active = FALSE,
            #       uiOutput('profileUI')
            #       ),
