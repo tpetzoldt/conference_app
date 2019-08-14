@@ -17,6 +17,7 @@ source('./modules/module_schedule.R')
 #source('./modules/module_profile.R') # currently no personal profile
 source('./modules/module_attendees.R')
 source('./modules/module_location.R')
+source('./modules/module_mixer.R')
 
 server <- function(input, output, session) {
 
@@ -56,6 +57,12 @@ server <- function(input, output, session) {
     module_locationUI('location')
   })
 
+  ## Mixer Module
+  callModule(module_mixer, 'mixer')
+  output$mixerUI <- renderUI({
+    module_mixerUI('mixer')
+  })
+  
 }
 
 ui <- f7Page(
@@ -102,6 +109,9 @@ ui <- f7Page(
                  ),
            f7Tab(tabName = 'Location', icon = 'place', active = FALSE,
                  uiOutput('locationUI')
+                 ),
+           f7Tab(tabName = 'Mixer', icon = 'place', active = FALSE,
+           uiOutput('mixerUI')
                  )
            )
     )

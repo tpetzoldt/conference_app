@@ -17,8 +17,9 @@ module_home <- function(input, output, session) {
       #list(name = 'Profile', icon = 'person'),
       list(name = 'Schedule', icon = 'event_available'),
       list(name = 'Attendees', icon = 'people'), 
-      list(name = 'Location', icon = 'place')
-      )
+      list(name = 'Location', icon = 'place'),
+      list(name = 'Mixer', icon = 'place')
+    )
     f7Card(title = 'Home',
            tags$div(class = 'list inset',
                     
@@ -60,4 +61,7 @@ module_home <- function(input, output, session) {
     tab_select(session, 'Location')
   })
   
+  observeEvent(input$but_Mixer, {
+    tab_select(session, 'Mixer')
+  })
 }
