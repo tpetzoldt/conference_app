@@ -88,6 +88,9 @@ ui <- f7Page(
     panels = f7Panel(title = "About", side = "left", theme = "light", style = "cover",
             f7Row(
               f7Button(color = "blue", label = "rinpharma.com", src = "http://rinpharma.com")
+            ),
+            f7Row(
+              p('Built using shinyF7')
             )
     ),
     navbar = f7Navbar(title = 'R/Pharma conference app', hairline = TRUE, shadow = TRUE, left_panel = TRUE, right_panel = FALSE),
