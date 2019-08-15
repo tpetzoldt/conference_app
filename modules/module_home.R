@@ -13,8 +13,6 @@ module_home <- function(input, output, session) {
     
   output$uiHome <- renderUI({
     buttons <- list (
-      # list(name = 'Feed', icon = 'list'),
-      #list(name = 'Profile', icon = 'person'),
       list(name = 'Schedule', icon = f7Icon('calendar_fill')),
       list(name = 'Attendees', icon = f7Icon('persons')), 
       list(name = 'Location', icon = f7Icon('placemark_fill')),
@@ -28,7 +26,7 @@ module_home <- function(input, output, session) {
                         lapply(buttons, function(x) {
                           div(class = 'item-content',
                               div(class = 'item-media',
-                                  f7Icon(x[['icon']], lib = 'md')
+                                  f7Icon(x[['icon']])
                                   ),
                               div(class = 'item-inner',
                                   tags$a(href = '#', id = ns(paste('but', x, sep='_')), class = 'action-button item-link list-button', x[['name']])
