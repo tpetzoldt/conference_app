@@ -45,9 +45,4 @@ module_attendees <- function(input, output, session, df_users) {
            )
   })
   
-  observeEvent(input$selected_contact, {
-    user_name <- df_users[df_users$id == input$selected_contact, ]$name
-    session$sendCustomMessage("show_user", paste0('User: ', user_name))
-  })
-  
 }

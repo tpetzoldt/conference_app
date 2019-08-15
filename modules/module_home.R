@@ -40,15 +40,7 @@ module_home <- function(input, output, session) {
                     )
            )
   })
-  
-  observeEvent(input$but_Feed, {
-    tab_select(session, 'Feed')
-  })
-  
-  # observeEvent(input$but_Profile, {
-  #   tab_select(session, 'Profile')
-  # })
-  
+
   observeEvent(input$but_Schedule, {
     tab_select(session, 'Schedule')
   })

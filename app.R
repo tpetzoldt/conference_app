@@ -13,8 +13,6 @@ source('./shinyF7_extend.R')
 
 source('./modules/module_home.R')
 source('./modules/module_schedule.R')
-# source('./modules/module_feed.R')  # remove feed - currently not used
-#source('./modules/module_profile.R') # currently no personal profile
 source('./modules/module_attendees.R')
 source('./modules/module_location.R')
 source('./modules/module_mixer.R')
@@ -33,18 +31,6 @@ server <- function(input, output, session) {
     module_scheduleUI('schedule')
   })
 
-  # ## Feed Module
-  # callModule(module_feed, 'feed')
-  # output$feedUI <- renderUI({
-  #   module_feedUI('feed')
-  # })
-  
-  ## Profile Module
-  # callModule(module_profile, 'profile', pool, user)
-  # output$profileUI <- renderUI({
-  #   module_profileUI('profile')
-  # })
-  
   ## Attendees Module
   callModule(module_attendees, 'attendees', df_users)
   output$attendeesUI <- renderUI({
@@ -74,11 +60,6 @@ ui <- f7Page(
       Shiny.addCustomMessageHandler('tab-select', function(tab) {
         app.tab.show('#' + tab);
       });
-      
-      Shiny.addCustomMessageHandler('show_user', function(Name) {
-        alert(Name);
-      });
-
     "))
   ),
   
@@ -98,12 +79,6 @@ ui <- f7Page(
            f7Tab(tabName = 'Home', icon = f7Icon('home_fill'), active = FALSE,
                  uiOutput('homeUI')
                  ),
-           # f7Tab(tabName = 'Feed', icon = 'list', active = FALSE,
-           #       uiOutput('feedUI')
-           #       ),
-           # f7Tab(tabName = 'Profile', icon = 'person', active = FALSE,
-           #       uiOutput('profileUI')
-           #       ),
            f7Tab(tabName = 'Schedule', icon = f7Icon('calendar_fill'), active = FALSE,
                  uiOutput('scheduleUI')
                  ),
