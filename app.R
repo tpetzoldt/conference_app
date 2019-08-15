@@ -83,7 +83,7 @@ ui <- f7Page(
   ),
   
   title = 'R/Pharma 2019',
-  f7Init(theme = 'md'),
+  f7Init(theme = 'auto'),
   f7TabLayout(
     panels = f7Panel(title = "About", side = "left", theme = "light", style = "cover",
             f7Row(
