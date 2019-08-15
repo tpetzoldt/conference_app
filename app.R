@@ -95,7 +95,7 @@ ui <- f7Page(
     ),
     navbar = f7Navbar(title = 'R/Pharma conference app', hairline = TRUE, shadow = TRUE, left_panel = TRUE, right_panel = FALSE),
     f7Tabs2(animated = TRUE, scrollable = TRUE,
-           f7Tab(tabName = 'Home', icon = 'home', active = FALSE,
+           f7Tab(tabName = 'Home', icon = f7Icon('home_fill'), active = FALSE,
                  uiOutput('homeUI')
                  ),
            # f7Tab(tabName = 'Feed', icon = 'list', active = FALSE,
@@ -104,16 +104,16 @@ ui <- f7Page(
            # f7Tab(tabName = 'Profile', icon = 'person', active = FALSE,
            #       uiOutput('profileUI')
            #       ),
-           f7Tab(tabName = 'Schedule', icon = 'event_available', active = FALSE,
+           f7Tab(tabName = 'Schedule', icon = f7Icon('calendar_fill'), active = FALSE,
                  uiOutput('scheduleUI')
                  ),
-           f7Tab(tabName = 'Attendees', icon = 'people', active = FALSE,
+           f7Tab(tabName = 'Attendees', icon = f7Icon('persons'), active = FALSE,
                  uiOutput('attendeesUI')
                  ),
-           f7Tab(tabName = 'Location', icon = 'place', active = FALSE,
+           f7Tab(tabName = 'Location', icon = f7Icon('placemark_fill'), active = FALSE,
                  uiOutput('locationUI')
                  ),
-           f7Tab(tabName = 'Mixer', icon = 'place', active = FALSE,
+           f7Tab(tabName = 'Mixer', icon = f7Icon('chat_fill'), active = FALSE,
            uiOutput('mixerUI')
                  )
            )

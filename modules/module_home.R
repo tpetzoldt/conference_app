@@ -13,12 +13,12 @@ module_home <- function(input, output, session) {
     
   output$uiHome <- renderUI({
     buttons <- list (
-      list(name = 'Feed', icon = 'list'),
+      # list(name = 'Feed', icon = 'list'),
       #list(name = 'Profile', icon = 'person'),
-      list(name = 'Schedule', icon = 'event_available'),
-      list(name = 'Attendees', icon = 'people'), 
-      list(name = 'Location', icon = 'place'),
-      list(name = 'Mixer', icon = 'place')
+      list(name = 'Schedule', icon = f7Icon('calendar_fill')),
+      list(name = 'Attendees', icon = f7Icon('persons')), 
+      list(name = 'Location', icon = f7Icon('placemark_fill')),
+      list(name = 'Mixer', icon = f7Icon('chat_fill'))
     )
     f7Card(title = 'Home',
            tags$div(class = 'list inset',
