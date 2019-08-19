@@ -12,6 +12,7 @@ df_users <- read_csv('./data/df_users.csv')
 source('./shinyF7_extend.R')
 
 source('./modules/module_home.R')
+source('./modules/module_info.R')
 source('./modules/module_schedule.R')
 source('./modules/module_attendees.R')
 source('./modules/module_location.R')
@@ -23,6 +24,12 @@ server <- function(input, output, session) {
   callModule(module_home, 'home')
   output$homeUI <- renderUI({
     module_homeUI('home')
+  })
+  
+  ## Info Module
+  callModule(module_info, 'info')
+  output$infoUI <- renderUI({
+    module_infoUI('info')
   })
   
   ## Agenda Module
@@ -79,6 +86,9 @@ ui <- f7Page(
            f7Tab(tabName = 'Home', icon = f7Icon('home_fill'), active = FALSE,
                  uiOutput('homeUI')
                  ),
+           f7Tab(tabName = 'Info', icon = f7Icon('info'), active = FALSE,
+                 uiOutput('infoUI')
+           ),
            f7Tab(tabName = 'Schedule', icon = f7Icon('calendar_fill'), active = FALSE,
                  uiOutput('scheduleUI')
                  ),

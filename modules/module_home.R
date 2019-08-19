@@ -14,6 +14,7 @@ module_home <- function(input, output, session) {
   output$uiHome <- renderUI({
     buttons <- list (
       list(name = 'Schedule', icon = f7Icon('calendar_fill')),
+      list(name = 'Info', icon = f7Icon('info')), 
       list(name = 'Attendees', icon = f7Icon('persons')), 
       list(name = 'Location', icon = f7Icon('placemark_fill')),
       list(name = 'Mixer', icon = f7Icon('chat_fill'))
@@ -41,6 +42,10 @@ module_home <- function(input, output, session) {
 
   observeEvent(input$but_Schedule, {
     tab_select(session, 'Schedule')
+  })
+  
+  observeEvent(input$but_Info, {
+    tab_select(session, 'Info')
   })
   
   observeEvent(input$but_Attendees, {
