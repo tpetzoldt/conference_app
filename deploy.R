@@ -6,6 +6,8 @@ library(shiny)
 library(shinyF7)
 library(tidyverse)
 
+source("shinyF7_extend.R")
+
 # Set the account info for deployment.
 setAccountInfo(name   = "epijimapps",
                token  = Sys.getenv("shinyapps_token"),
