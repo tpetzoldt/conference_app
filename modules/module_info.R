@@ -15,6 +15,14 @@ module_info <- function(input, output, session) {
              tags$p('Registration will run from 8:10am.'),
              tags$h4('Communication'),
              tags$p(HTML(paste0('The best way to contact the Organizing Committee or other R/Pharma attendees is via the ', f7Link(src = 'https://rinpharma.slack.com', label = 'slack channel', external = TRUE), '.  We will leave this channel open as a way to continue conversations after the conference.'))),
+             tags$h4('Wifi'),
+             tags$p('Connect to wifi as follows:'),
+             tags$ul(
+               tags$li('Select "Harvard University" wireless network'),
+               tags$li('Open a browser and go to getonline.harvard.edu'),
+               tags$li('Select "I am a guest"'),
+               tags$li(HTML(paste0('Enter the following credentials: username = ', tags$b('iqssevents@gmail.com'), ', password = ', tags$b('IqSsROX!1'))))
+             ),
              tags$h4('Workshops'),
              tags$p('Workshops will run on Wednesday, August 21st.  Morning workshops will start at 8:40am and afternoon workshops at 1:30pm.'),
              tags$p('Breakfast will not be available on the workshop day but lunch will be provided along with two scheduled breaks.'),
