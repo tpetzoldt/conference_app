@@ -11,6 +11,10 @@ module_info <- function(input, output, session) {
   output$uiInfo <- renderUI({
     f7Card(title = 'Useful Information',
            tagList(
+             tags$h3('Post-Conference Drinks'),
+             tags$p('After the conference we will be hanging out at Beat Brew Hall'),
+             tags$p(HTML(paste0('You can find directions ', f7Link(src = 'https://goo.gl/maps/rM5ntNzWa5f4owPN7', label = 'here', external = TRUE)))),
+             tags$p('Please join if you can!!!'),
              tags$h4('Registration'),
              tags$p('Registration will run from 8:10am.'),
              tags$h4('Communication'),
