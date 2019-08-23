@@ -18,6 +18,6 @@ r_packages:
   - tidyverse
   - RSQLite
 r_github_packages:
-  - RinteRface/shinyF7
+  - RinteRface/shinyF7@96be4028441b48b5970a76584d30cdc22f9faf60
 script:
 - R -f deploy.R
