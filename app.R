@@ -2,7 +2,8 @@
 ## written using shinyF7 (framework 7)
 
 library(shiny)
-library(shinyF7)
+#library(shinyF7)
+library(shinyMobile)
 library(tidyverse)
 
 df_schedule <- read_csv('./data/df_schedule.csv')
@@ -71,11 +72,11 @@ ui <- f7Page(
   ),
   
   title = 'R/Pharma 2019',
-  init = f7Init(theme = 'auto'),
+  init = f7Page(theme = 'auto'),
   f7TabLayout(
     panels = f7Panel(title = "About", side = "left", theme = "light", style = "cover",
             f7Row(
-              f7Button(color = "blue", label = "rinpharma.com", src = "http://rinpharma.com")
+              f7Button(color = "blue", label = "rinpharma.com", href = "http://rinpharma.com")
             ),
             f7Row(
               p('Built using shinyF7')

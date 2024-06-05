@@ -13,12 +13,12 @@ module_info <- function(input, output, session) {
            tagList(
              tags$h3('Post-Conference Drinks'),
              tags$p('After the conference we will be hanging out at Beat Brew Hall'),
-             tags$p(HTML(paste0('You can find directions ', f7Link(src = 'https://goo.gl/maps/rM5ntNzWa5f4owPN7', label = 'here', external = TRUE)))),
+             tags$p(HTML(paste0('You can find directions ', f7Link(href = 'https://goo.gl/maps/rM5ntNzWa5f4owPN7', label = 'here', routable = TRUE)))),
              tags$p('Please join if you can!!!'),
              tags$h4('Registration'),
              tags$p('Registration will run from 8:10am.'),
              tags$h4('Communication'),
-             tags$p(HTML(paste0('The best way to contact the Organizing Committee or other R/Pharma attendees is via the ', f7Link(src = 'https://rinpharma.slack.com', label = 'slack channel', external = TRUE), '.  We will leave this channel open as a way to continue conversations after the conference.'))),
+             tags$p(HTML(paste0('The best way to contact the Organizing Committee or other R/Pharma attendees is via the ', f7Link(href = 'https://rinpharma.slack.com', label = 'slack channel', routable = TRUE), '.  We will leave this channel open as a way to continue conversations after the conference.'))),
              tags$h4('Wifi'),
              tags$p('Connect to wifi as follows:'),
              tags$ul(
@@ -30,7 +30,7 @@ module_info <- function(input, output, session) {
              tags$h4('Workshops'),
              tags$p('Workshops will run on Wednesday, August 21st.  Morning workshops will start at 8:40am and afternoon workshops at 1:30pm.'),
              tags$p('Breakfast will not be available on the workshop day but lunch will be provided along with two scheduled breaks.'),
-             tags$p(HTML(paste0('If you are registered for a workshop please bring a charged laptop.  We will be running instances of ', f7Link(src = 'https://rstudio.cloud/', label = 'RStudio Cloud', external = TRUE), ' and RTT (RStudio Training Tool).'))),
+             tags$p(HTML(paste0('If you are registered for a workshop please bring a charged laptop.  We will be running instances of ', f7Link(href = 'https://rstudio.cloud/', label = 'RStudio Cloud', routable = TRUE), ' and RTT (RStudio Training Tool).'))),
              tags$h4('Main Conference'),
              tags$p('All talks will be held in the Tsai Auditorium.  The conference and room will be full so please be mindful of space.'),
              tags$p('Breakfast will be available during registration, lunch will be at 12:30pm and there will also be a morning and afternoon break.'),
